@@ -1,4 +1,4 @@
-export const authBearer = (req, res, next) => {
+const authBearer = (req, res, next) => {
     const authHeader = req.headers.authorization;
 
     // Tidak ada Authorization
@@ -23,3 +23,5 @@ export const authBearer = (req, res, next) => {
 
     next();
 };
+
+module.exports = authBearer;
